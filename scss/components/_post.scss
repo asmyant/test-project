@@ -1,0 +1,54 @@
+@use "../helpers/variables";
+
+.post-item {
+  max-width: 690px;
+
+  &__title {
+    font-size: 24px;
+    line-height: 29px;
+  }
+
+  &__share {
+    background-color: transparent;
+    border: none;
+    fill: variables.$color_primary;
+    margin-left: 12px;
+    cursor: pointer;
+  }
+
+  &__head {
+    display: flex;
+    margin-bottom: 16px;
+    align-items: center;
+  }
+
+  &__content {
+    font-size: 15px;
+    line-height: 21px;
+    margin-bottom: 40px;
+
+    p {
+      margin: 0;
+    }
+  }
+}
+
+.post-item-feedback {
+  &__title {
+    font-size: 13px;
+    line-height: 15.6px;
+    font-weight: 500;
+    margin-bottom: 16px;
+  }
+
+  &__actions {
+    gap: 8px;
+    display: flex;
+  }
+
+  &__callback {
+    @media (max-width: variables.$breakpoint_sm) {
+      min-width: initial;
+    }
+  }
+}

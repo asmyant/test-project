@@ -1,0 +1,29 @@
+@use "../helpers/variables";
+
+.home-page {
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  @media (max-width: variables.$breakpoint_lg) {
+    padding-top: 0;
+  }
+
+  &__join {
+    margin-top: 84px;
+
+    @media (max-width: variables.$breakpoint_md) {
+      margin-top: 54px;
+    }
+  }
+
+  &__faqs {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    overflow: hidden;
+
+    @media (max-width: variables.$breakpoint_md) {
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
+  }
+}

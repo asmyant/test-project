@@ -1,0 +1,53 @@
+@use "../helpers/variables";
+
+.socials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.socials-item {
+  $self: &;
+
+  display: flex;
+  align-items: center;
+  background-size: 300%;
+  justify-content: center;
+  background-color: variables.$color_light_90;
+  transition:
+    background-color variables.$transition,
+    transform variables.$transition;
+
+  &--size-lg {
+    width: 56px;
+    height: 56px;
+    border-radius: variables.$border_radius_xs;
+
+    @media (max-width: variables.$breakpoint_sm) {
+      width: 42px;
+      height: 42px;
+      border-radius: variables.$border-radius_xxs;
+    }
+  }
+
+  &--size-md {
+    width: 48px;
+    height: 48px;
+    border-radius: variables.$border_radius_xs;
+  }
+
+  &:hover {
+    color: variables.$color_light;
+    transform: translateY(-1px);
+    background-color: variables.$color_primary;
+  }
+
+  &__icon {
+    fill: variables.$color_primary;
+    transition: fill variables.$transition;
+
+    #{$self}:hover & {
+      fill: variables.$color_light;
+    }
+  }
+}

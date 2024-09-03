@@ -1,0 +1,74 @@
+@use "../helpers/variables";
+
+.contacts {
+  display: flex;
+  margin-left: -4px;
+  margin-right: -4px;
+  margin-bottom: -8px;
+
+  @media (max-width: variables.$breakpoint_md) {
+    margin-bottom: -4px;
+    margin-left: -2px;
+    margin-right: -2px;
+  }
+
+  &__col {
+    padding-left: 4px;
+    padding-right: 4px;
+    padding-bottom: 8px;
+
+    @media (max-width: variables.$breakpoint_md) {
+      flex: 0 0 50%;
+      max-width: 50%;
+      padding-left: 2px;
+      padding-right: 2px;
+      padding-bottom: 4px;
+    }
+
+    @media (max-width: variables.$breakpoint_sm) {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+  }
+}
+
+.contacts-item {
+  $self: &;
+
+  border-radius: variables.$border_radius_xs;
+  background-color: variables.$color_light;
+  background-size: 300%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  min-width: 160px;
+  padding-left: 15px;
+  padding-right: 15px;
+  text-decoration: none;
+  transition: background variables.$transition,
+  color variables.$transition,
+  transform variables.$transition;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 18px;
+  content: '';
+  background-image: linear-gradient(20deg, variables.$color_light 50%, variables.$color_primary 50%);
+  color: variables.$color_main;
+
+  &__icon {
+    margin-right: 5px;
+    fill: variables.$color_main;
+    transition: fill variables.$transition;
+
+    #{$self}:hover & {
+      fill: variables.$color_light;
+    }
+  }
+
+  &:hover {
+    background-position: 100%;
+    color: variables.$color_light;
+    transform: translateY(-2px);
+  }
+}

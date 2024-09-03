@@ -1,0 +1,9 @@
+@use "../helpers/variables" as variables;
+
+body {
+  font-size: 15px;
+  line-height: 1.2;
+  font-family: variables.$font-family;
+  color: variables.$color_main;
+  font-weight: 300;
+}

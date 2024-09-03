@@ -1,0 +1,31 @@
+@use "../helpers/variables";
+
+.faq-item {
+  box-shadow: 0px 0px 30px 0px rgba(variables.$color_main, 0.05);
+  border-radius: variables.$border_radius_sm;
+  background-color: variables.$color_light;
+  padding: 16px;
+  min-height: 160px;
+  display: flex;
+  justify-content: space-between;
+
+  &__picture {
+    align-content: center;
+    margin-left: 15px;
+  }
+
+  &__title {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 24px;
+    display: block;
+  }
+
+  &__description {
+    font-size: 15px;
+    line-height: 21px;
+    display: block;
+    margin-top: 8px;
+    color: variables.$color_secondary;
+  }
+}

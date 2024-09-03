@@ -1,0 +1,34 @@
+@use "../helpers/variables";
+
+.button {
+  $self: &;
+
+  min-height: 48px;
+  min-width: 224px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 15px;
+  padding-right: 15px;
+  font-weight: 500;
+  text-decoration: none;
+  border-radius: variables.$border_radius_xs;
+  transition: background-color variables.$transition;
+
+  &__icon {
+    margin-right: 8px;
+
+    #{$self}--theme-primary & {
+      fill: variables.$color_light;
+    }
+  }
+
+  &--theme-primary {
+    background-color: variables.$color_primary;
+    color: variables.$color_light;
+
+    &:hover {
+      background-color: variables.$color_main;
+    }
+  }
+}

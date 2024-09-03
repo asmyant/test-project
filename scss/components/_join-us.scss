@@ -1,0 +1,64 @@
+@use "../helpers/variables";
+
+.join-us {
+  border-radius: variables.$border_radius_lg;
+  box-shadow: 0px 20px 60px 0px rgba(variables.$color_main, 0.05);
+  padding: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: auto;
+  margin-right: auto;
+  min-height: 166px;
+
+  @media (max-width: variables.$breakpoint_lg) {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  @media (max-width: variables.$breakpoint_md) {
+    padding: 0;
+    box-shadow: none;
+    min-height: initial;
+    border-radius: 0;
+  }
+
+  &__socials {
+    justify-content: center;
+    margin-left: 25px;
+    gap: 14px;
+
+    @media (max-width: variables.$breakpoint_lg) {
+      margin-left: 0;
+      margin-top: 25px;
+    }
+
+    @media (max-width: variables.$breakpoint_sm) {
+      gap: 5px;
+    }
+  }
+
+  &__title {
+    font-size: 40px;
+    line-height: 48px;
+    font-weight: 500;
+    margin-top: 17px;
+
+    @media (max-width: variables.$breakpoint_md) {
+      font-size: 32px;
+      line-height: 35px;
+      margin-top: 5px;
+    }
+
+    @media (max-width: variables.$breakpoint_sm) {
+      font-size: 28px;
+      line-height: 32px;
+    }
+  }
+
+  &__text {
+    font-size: 15px;
+    line-height: 18px;
+    font-weight: 500;
+  }
+}
