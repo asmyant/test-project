@@ -267,6 +267,23 @@ body {
   background-image: linear-gradient(20deg, hsl(0deg, 0%, 100%) 50%, hsl(139deg, 55%, 47%) 50%);
   color: hsl(0deg, 0%, 10%);
 }
+@media (max-width: 576px) {
+  .contacts-item {
+    background-size: 100%;
+    background-image: none;
+    background-color: hsl(0deg, 0%, 100%);
+  }
+}
+.contacts-item:hover {
+  background-position: 100%;
+  color: hsl(0deg, 0%, 100%);
+  transform: translateY(-2px);
+}
+@media (max-width: 576px) {
+  .contacts-item:hover {
+    background-color: hsl(139deg, 55%, 47%);
+  }
+}
 .contacts-item__icon {
   margin-right: 5px;
   fill: hsl(0deg, 0%, 10%);
@@ -274,11 +291,6 @@ body {
 }
 .contacts-item:hover .contacts-item__icon {
   fill: hsl(0deg, 0%, 100%);
-}
-.contacts-item:hover {
-  background-position: 100%;
-  color: hsl(0deg, 0%, 100%);
-  transform: translateY(-2px);
 }
 
 .join-us {

@@ -56,6 +56,22 @@
   background-image: linear-gradient(20deg, variables.$color_light 50%, variables.$color_primary 50%);
   color: variables.$color_main;
 
+  @media (max-width: variables.$breakpoint_sm) {
+    background-size: 100%;
+    background-image: none;
+    background-color: variables.$color_light;
+  }
+
+  &:hover {
+    background-position: 100%;
+    color: variables.$color_light;
+    transform: translateY(-2px);
+
+    @media (max-width: variables.$breakpoint_sm) {
+      background-color: variables.$color_primary;
+    }
+  }
+
   &__icon {
     margin-right: 5px;
     fill: variables.$color_main;
@@ -64,11 +80,5 @@
     #{$self}:hover & {
       fill: variables.$color_light;
     }
-  }
-
-  &:hover {
-    background-position: 100%;
-    color: variables.$color_light;
-    transform: translateY(-2px);
   }
 }
